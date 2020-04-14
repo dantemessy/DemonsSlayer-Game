@@ -8,11 +8,11 @@ let loading = document.querySelector('.loading');
     console.log('hi?')
     setTimeout(()=>{
         loading.classList.add('fadeOut');
-    }, 3000);
+    }, 5000);
     
     setTimeout(()=>{
         loading.classList.add('show');
-    }, 6000);
+    }, 10000);
 
 })();
 
