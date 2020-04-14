@@ -9,7 +9,7 @@ height: 100vh;
 background-color: gray;
 display: flex;
 flex-grow: initial;
-background: url('https://images.alphacoders.com/104/1049984.jpg') no-repeat center;
+background: url('./img/1049984.jpg') no-repeat center;
 position: relative;
 background-size: cover;
 perspective:9000px;
@@ -52,14 +52,54 @@ overflow: hidden;
     color: white;
     transform-style: preserve-3d;
 
+} 
+
+.container-back h2 {
+    margin: 50px;
+    display: block;
+    text-align: center;
+    font-size: 70px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
 }
+
+.container-back h3 {
+    margin-top: 60px;
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 5px;
+}
+
+.container-back p {
+    margin-top: 30px;
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 5px;
+}
+
+
+.container-back h4{
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 5px;
+    position: absolute;
+    bottom: 55px;
+    width: 200px;
+    left: calc(50% - 100px);
+    overflow: hidden;
+
+}
+
 
 .container-back img {
     
     position: absolute;
     width: 100px;
     height: 100px;
-    bottom: 50px;
+    bottom: 100px;
     left: calc(50% - 50px);
     cursor: pointer;
 }
@@ -121,7 +161,7 @@ overflow: hidden;
     width: 100%;
     position: absolute;
     opacity: 50%;
-    background: url('https://images.alphacoders.com/104/1049984.jpg') no-repeat center;
+    background: url('./img/1049984.jpg') no-repeat center;
     background-size: cover;
     animation: fire 3s linear infinite;
     /* z-index: -1; */

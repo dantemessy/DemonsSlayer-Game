@@ -1,6 +1,20 @@
 'use strict'
 
 
+// count the time player take to solve the game 
+let counter = 0 ;
+let finishFlag = true ;
+
+// selectors
+let media = document.querySelector('.mp3Media');
+let play = document.querySelector('.play');
+let pause = document.querySelector('.pause');
+let firstCard, secondCard ;
+
+// finished flag 
+let flag = 0 ;
+
+
 // loading Screen >>
 let loading = document.querySelector('.loading');
 
@@ -12,16 +26,20 @@ let loading = document.querySelector('.loading');
     
     setTimeout(()=>{
         loading.classList.add('show');
-    }, 10000);
+    }, 7500);
 
 })();
 
 
 document.querySelectorAll('.card').forEach(card => card.addEventListener('click', flip))
 
-let firstCard, secondCard ;
-let counter = 0 ;
 function flip() {
+
+    //start counter
+    if(!counter){
+        startCounter();
+    }
+
 
     // click the same card do nothing 
     if (firstCard === this) return;
@@ -42,9 +60,11 @@ function flip() {
             secondCard.removeEventListener('click', flip);
             [firstCard, secondCard] = [undefined, undefined];
 
-            counter = 6;
-            console.log('counter' , counter);
-            if(counter > 5) flipContainer() ;
+            flag ++;
+            if(flag > 5) {
+                finishFlag = false ;
+                flipContainer() ;
+            }
             return;
         } else {
             setTimeout(() => {
@@ -60,7 +80,6 @@ function flip() {
 function flipContainer(){
     setTimeout(() => {
         let container = document.querySelector('.container') ;
-        console.log('f f' , container);
         container.classList.toggle('flip');
     }, 1500);
 }
@@ -82,14 +101,18 @@ let playAgain = ()=> {
         card.addEventListener('click' , flip);
     });
     shuffle()
+    counter = 0 ;
+    flag = 0 ;
     document.querySelector('.container').classList.remove('flip');
 }
 
 
-let media = document.querySelector('.mp3Media');
-let play = document.querySelector('.play');
-let pause = document.querySelector('.pause');
+
+
+// on load settings for the audio
 media.volume = 0.1 ;
+media.play() ;
+
 
 function runMusic(){
     media.play() ;
@@ -101,6 +124,31 @@ function pauseMusic(){
     pause.style.display = 'none';
     play.style.display = 'unset';
 }
+
+
+
+// timer function ;
+
+function startCounter(){
+    if(finishFlag){
+        setTimeout(()=>{
+            let min = Math.floor(counter/10/60) ;
+            let sec = Math.floor(counter/10%60) ;
+            if(min < 10){
+				min = "0" + min;
+			} 
+			if(sec < 10){
+				sec = "0" + sec;
+			}
+            counter ++ ;
+
+            document.querySelector('.counter').innerHTML = `${min}:${sec}` ;
+            startCounter();
+        } , 100)
+    }
+}
+    
+
 
 
 
