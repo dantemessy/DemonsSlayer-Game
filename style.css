@@ -1,0 +1,254 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+.flex{
+height: 100vh;
+background-color: gray;
+display: flex;
+flex-grow: initial;
+background: url('https://images.alphacoders.com/104/1049984.jpg') no-repeat center;
+position: relative;
+background-size: cover;
+perspective:9000px;
+/* transform-style: preserve-3d; */
+/* backface-visibility: hidden; */
+/* transform: rotateY(18); */
+
+
+}
+
+
+.container{
+    height: 600px;
+    width: 700px;
+    margin: auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 5s ;
+    z-index: 16;
+
+}
+
+/* .container:hover {
+    transform: rotateY(180deg); 
+} */
+
+.container-front{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    backface-visibility: hidden;
+    z-index: 15;
+    perspective: 100vh;
+
+}
+
+
+.container-back{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    z-index: 14;
+    color: white;
+    transform-style: preserve-3d;
+
+}
+
+.container-back img {
+    
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    bottom: 50px;
+    left: calc(50% - 50px);
+    cursor: pointer;
+}
+
+
+
+.card{
+    position: relative;
+    height: calc(33% - 10px) ;
+    width: calc(25% - 10px) ;
+    border:solid 1px rgba(255, 255, 255, 0.5);
+    border-radius: 10%;
+    margin: 5px;
+    transform-style: preserve-3d;
+    transition: all 1s;
+    z-index: 5;
+    cursor: pointer;
+}
+
+
+
+.card > div {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+
+.front {
+    background: url("https://i.redd.it/71xzydpsbhb41.jpg") no-repeat center ;
+    border-radius: 10%;
+    border: none;
+    background-size: cover;
+    backface-visibility: hidden;
+    z-index: 5;
+}
+
+.back{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* temp image */
+    /* background-image: url("https://i.redd.it/54ih8b3hw3p31.jpg"); */
+    z-index: 4;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    border-radius: 10%;
+
+
+    
+}
+
+.flip { 
+    transform: rotateY(180deg);
+}
+
+.motion{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 50%;
+    background: url('https://images.alphacoders.com/104/1049984.jpg') no-repeat center;
+    background-size: cover;
+    animation: fire 3s linear infinite;
+    /* z-index: -1; */
+    }
+
+@keyframes fire {
+    0% , 100%  {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(.99);
+    }
+}
+
+
+
+
+
+
+/* cards images */
+.one {
+    background-image: url('./img/8.jpg');
+}
+.two {
+    background-image: url('./img/9.jpg');
+}
+.three {
+    background-image: url('./img/10.jpg');
+}
+.four {
+    background-image: url('./img/77.png');
+}
+.five {
+    background-image: url('./img/88.png');
+}
+.six {
+    background-image: url('./img/888.png');
+}
+
+
+
+.social{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    position: absolute;
+    left: 10px;
+    top: calc(50% - 150px) ;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+.social img {
+    height: 50px;
+    width: 50px;
+    display: block;
+    margin: 10px;
+    filter: invert();
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.social img:hover , .media img:hover {
+    transform: scale(.85) ;
+}
+
+
+.media {
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 10px;
+    top: calc(50% + 100px) ;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    transition: all 1s;
+
+}
+.media img {
+    position: absolute;
+    height: calc(100% - 20px) ;
+    width: calc(100%- 20px) ;
+    filter: invert();
+    cursor: pointer;
+    transition: all 1s ease;
+    margin: 10px;
+}
+/* .media img .play {
+
+}  */
+.media .pause {
+    display: none;
+} 
+
+
+
+
+
+.flare {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.flare img {
+    display: block;
+    position: absolute;
+    animation: animate 2s infinite;
+    overflow: hidden;
+    height: 100%;
+}
+
+@keyframes animate {
+
+    50% {
+        /* transform: translateY(100%); */
+    }
+    
+}
