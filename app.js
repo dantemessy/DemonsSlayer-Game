@@ -18,17 +18,17 @@ let flag = 0 ;
 // loading Screen >>
 let loading = document.querySelector('.loading');
 
-(function loaded() {
-    console.log('hi?')
+
+function loaded() {
     setTimeout(()=>{
         loading.classList.add('fadeOut');
-    }, 10000);
+    }, 3000);
     
     setTimeout(()=>{
         loading.classList.add('show');
-    }, 12500);
+    }, 5700);
 
-})();
+};
 
 
 document.querySelectorAll('.card').forEach(card => card.addEventListener('click', flip))
