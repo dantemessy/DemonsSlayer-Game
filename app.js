@@ -60,7 +60,7 @@ let shuffle = () => {
 shuffle()
 
 let playAgain = ()=> {
-    console.log('again')
+
     document.querySelectorAll('.card').forEach( card => {
         card.classList.remove('flip');
         card.addEventListener('click' , flip);
@@ -73,8 +73,8 @@ let playAgain = ()=> {
 let media = document.querySelector('.mp3Media');
 let play = document.querySelector('.play');
 let pause = document.querySelector('.pause');
+media.volume = 0.1 ;
 
-console.log('media' , media )
 function runMusic(){
     media.play() ;
     play.style.display = 'none' ;

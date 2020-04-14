@@ -13,6 +13,7 @@ background: url('https://images.alphacoders.com/104/1049984.jpg') no-repeat cent
 position: relative;
 background-size: cover;
 perspective:9000px;
+overflow: hidden;
 /* transform-style: preserve-3d; */
 /* backface-visibility: hidden; */
 /* transform: rotateY(18); */
@@ -137,10 +138,10 @@ perspective:9000px;
 
 @keyframes fire {
     0% , 100%  {
-        transform: scale(1.0);
+        transform: scale(1);
     }
     50% {
-        transform: scale(.99);
+        transform: scale(1.01);
     }
 }
 
@@ -225,30 +226,3 @@ perspective:9000px;
 .media .pause {
     display: none;
 } 
-
-
-
-
-
-.flare {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-}
-
-.flare img {
-    display: block;
-    position: absolute;
-    animation: animate 2s infinite;
-    overflow: hidden;
-    height: 100%;
-}
-
-@keyframes animate {
-
-    50% {
-        /* transform: translateY(100%); */
-    }
-    
-}
