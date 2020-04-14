@@ -22,11 +22,11 @@ let loading = document.querySelector('.loading');
     console.log('hi?')
     setTimeout(()=>{
         loading.classList.add('fadeOut');
-    }, 5000);
+    }, 10000);
     
     setTimeout(()=>{
         loading.classList.add('show');
-    }, 7500);
+    }, 12500);
 
 })();
 
