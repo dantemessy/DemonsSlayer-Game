@@ -1,6 +1,22 @@
 'use strict'
 
 
+// loading Screen >>
+let loading = document.querySelector('.loading');
+
+(function loaded() {
+    console.log('hi?')
+    setTimeout(()=>{
+        loading.classList.add('fadeOut');
+    }, 3000);
+    
+    setTimeout(()=>{
+        loading.classList.add('show');
+    }, 6000);
+
+})();
+
+
 document.querySelectorAll('.card').forEach(card => card.addEventListener('click', flip))
 
 let firstCard, secondCard ;
@@ -85,4 +101,6 @@ function pauseMusic(){
     pause.style.display = 'none';
     play.style.display = 'unset';
 }
+
+
 
