@@ -31,7 +31,7 @@ function loaded() {
     
     setTimeout(()=>{
         play.click() ;
-        how.click()
+        // how.click()
         loading.classList.add('show');
     }, 5700);
 
