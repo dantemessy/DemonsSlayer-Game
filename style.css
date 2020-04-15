@@ -129,7 +129,7 @@ overflow: hidden;
 
 
 .front {
-    background: url("https://i.redd.it/71xzydpsbhb41.jpg") no-repeat center ;
+    background: url("./img/71xzydpsbhb41.jpg") no-repeat center ;
     border-radius: 10%;
     border: none;
     background-size: cover;
@@ -141,8 +141,6 @@ overflow: hidden;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* temp image */
-    /* background-image: url("https://i.redd.it/54ih8b3hw3p31.jpg"); */
     z-index: 4;
     transform: rotateY(180deg);
     backface-visibility: hidden;
@@ -254,7 +252,7 @@ overflow: hidden;
 /* .media img .play {
 
 }  */
-.media .play {
+.media .pause {
     display: none;
 } 
 
@@ -297,4 +295,22 @@ overflow: hidden;
     width: 200px;
     margin: 20px;
     border-radius: 50%;
+}
+
+
+@media (max-width : 991px) {
+    .container{
+        height: 900px;
+        width: 900px;
+    }
+
+    .media {
+        display: none;
+    }
+
+    .social {
+        display: none;
+    }
+    
+    
 }

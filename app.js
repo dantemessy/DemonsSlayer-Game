@@ -22,6 +22,8 @@ let loading = document.querySelector('.loading');
 function loaded() {
     setTimeout(()=>{
         loading.classList.add('fadeOut');
+        play.click() ;
+        
     }, 3000);
     
     setTimeout(()=>{
@@ -111,7 +113,6 @@ let playAgain = ()=> {
 
 // on load settings for the audio
 media.volume = 0.1 ;
-media.play() ;
 
 
 function runMusic(){
