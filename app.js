@@ -12,6 +12,8 @@ let pause = document.querySelector('.pause');
 let firstCard, secondCard ;
 let howToPlay = document.querySelector('.howTo');
 let arrow = document.querySelector('.readMore');
+let how = document.querySelector('.how');
+
 
 // finished flag 
 let flag = 0 ;
@@ -29,7 +31,7 @@ function loaded() {
     
     setTimeout(()=>{
         play.click() ;
-        arrow.click();
+        how.click()
         loading.classList.add('show');
     }, 5700);
 

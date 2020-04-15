@@ -228,6 +228,7 @@ overflow: hidden;
     overflow: hidden;
     transition: all 1s ease;
     z-index: 2;
+    cursor: pointer;
 }
 
 .howTo {
