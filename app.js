@@ -10,6 +10,8 @@ let media = document.querySelector('.mp3Media');
 let play = document.querySelector('.play');
 let pause = document.querySelector('.pause');
 let firstCard, secondCard ;
+let howToPlay = document.querySelector('.howTo');
+let arrow = document.querySelector('.readMore');
 
 // finished flag 
 let flag = 0 ;
@@ -22,11 +24,11 @@ let loading = document.querySelector('.loading');
 function loaded() {
     setTimeout(()=>{
         loading.classList.add('fadeOut');
-        play.click() ;
         
     }, 3000);
     
     setTimeout(()=>{
+        play.click() ;
         loading.classList.add('show');
     }, 5700);
 
@@ -150,6 +152,10 @@ function startCounter(){
 }
     
 
+function readMore() {
+    howToPlay.classList.toggle('close');
+    arrow.classList.toggle('rotate');
+}
 
 
 

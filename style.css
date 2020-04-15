@@ -8,7 +8,6 @@ box-sizing: border-box;
 height: 100vh;
 background-color: gray;
 display: flex;
-flex-grow: initial;
 background: url('./img/1049984.jpg') no-repeat center;
 position: relative;
 background-size: cover;
@@ -114,9 +113,23 @@ overflow: hidden;
     border-radius: 10%;
     margin: 5px;
     transform-style: preserve-3d;
-    transition: all 1s;
+    transition: transform 1s , box-shadow .5s;
     z-index: 5;
     cursor: pointer;
+    box-shadow: 1px 1px  rgba(0, 0, 0, 0.5);
+    /* box-shadow: 1px 1px 10px 15px rgba(232, 90, 42, 0.5); */
+
+
+}
+
+.card:hover {
+    box-shadow: 1px 1px 10px 12px rgba(249, 249, 249, 0.23);
+    /* transform: scale(1.01); */
+}
+
+.card:hover .front{
+    /* box-shadow: 1px 1px 10px 12px rgba(249, 249, 249, 0.23); */
+    transform: scale(1.01);
 }
 
 
@@ -135,6 +148,7 @@ overflow: hidden;
     background-size: cover;
     backface-visibility: hidden;
     z-index: 5;
+    transition: transform .5s;
 }
 
 .back{
@@ -145,9 +159,6 @@ overflow: hidden;
     transform: rotateY(180deg);
     backface-visibility: hidden;
     border-radius: 10%;
-
-
-    
 }
 
 .flip { 
@@ -199,6 +210,67 @@ overflow: hidden;
     background-image: url('./img/888.png');
 }
 
+.how , .howTo{
+    height: 100px;
+    width: 280px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-grow: 100%;
+    right: 10px;
+    top: calc(50% - 150px) ;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    color: white;
+    overflow: hidden;
+    transition: all 1s ease;
+    z-index: 2;
+}
+
+.howTo {
+    height: 0px;
+    z-index: 1;
+    top: calc(50% - 40px) ;
+}
+
+
+.close {
+    height: 260px;
+}
+
+.rotate {
+    transform: scale(1 , -1);
+}
+
+.how h2 {
+    display: block;
+    text-align: center;
+    margin: 25px 0 10px 0 ;
+}
+
+.howTo li{
+    margin: 20px 0;
+    margin-left: 25px;
+    /* list-style: inside; */
+    list-style-position: outside;
+    text-indent: inherit;
+    letter-spacing: 2px;
+}
+
+.readMore {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid red;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: all 1s ease;
+}
 
 
 .social{
