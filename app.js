@@ -29,6 +29,7 @@ function loaded() {
     
     setTimeout(()=>{
         play.click() ;
+        arrow.click();
         loading.classList.add('show');
     }, 5700);
 
