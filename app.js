@@ -108,6 +108,7 @@ let playAgain = ()=> {
         card.addEventListener('click' , flip);
     });
     shuffle()
+    finishFlag = true ;
     counter = 0 ;
     flag = 0 ;
     document.querySelector('.container').classList.remove('flip');
@@ -159,6 +160,11 @@ function readMore() {
     howToPlay.classList.toggle('close');
     arrow.classList.toggle('rotate');
 }
+
+console.log(navigator.platform)
+console.log(navigator.appVersion)
+
+console.log('screen' , screen.width)
 
 
 
