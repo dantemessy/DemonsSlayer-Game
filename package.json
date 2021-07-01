@@ -1,0 +1,26 @@
+{
+  "name": "DemonsSlayer-Game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "browserify-shim": "^3.8.14",
+    "googleapis": "^79.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dantemessy/DemonsSlayer-Game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dantemessy/DemonsSlayer-Game/issues"
+  },
+  "homepage": "https://github.com/dantemessy/DemonsSlayer-Game#readme"
+}
