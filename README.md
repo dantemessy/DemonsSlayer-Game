@@ -1,5 +1,5 @@
 ## Demon Slayer Memory Card Game 
 
 
-[Live WebSite](https://competent-edison-2605ff.netlify.com)
+[Live WebSite](https://dantemessy.github.io/DemonsSlayer-Game/)
 
